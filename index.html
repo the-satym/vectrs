@@ -1,56 +1,380 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Vectrs - Build Together</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vectrs | Build Together</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --bg:#080b12;
+    --card:#111827;
+    --accent:#6366f1;
+    --accent2:#06b6d4;
+    --text:#ffffff;
+    --muted:#94a3b8;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+nav{
+    padding:25px 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:1.6rem;
+    font-weight:800;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+}
+
+.btn{
+    background:linear-gradient(
+    135deg,
+    var(--accent),
+    var(--accent2)
+    );
+
+    color:white;
+    padding:12px 22px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:4rem;
+    font-weight:800;
+    line-height:1.1;
+}
+
+.hero span{
+    background:linear-gradient(
+        135deg,
+        #818cf8,
+        #22d3ee
+    );
+
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero p{
+    max-width:700px;
+    margin:30px auto;
+    color:var(--muted);
+    font-size:1.15rem;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+}
+
+.btn-secondary{
+    border:1px solid #334155;
+    color:white;
+    text-decoration:none;
+    padding:12px 22px;
+    border-radius:12px;
+}
+
+.features{
+    padding:100px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:rgba(255,255,255,.04);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.05);
+
+    padding:30px;
+    border-radius:20px;
+
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+.card h3{
+    margin-bottom:15px;
+}
+
+.card p{
+    color:var(--muted);
+}
+
+.stats{
+    padding:100px 0;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.stat{
+    text-align:center;
+}
+
+.stat h2{
+    font-size:2.5rem;
+    color:#22d3ee;
+}
+
+.pricing{
+    padding:100px 0;
+}
+
+.price-card{
+    background:#111827;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+}
+
+.price{
+    font-size:3rem;
+    margin:20px 0;
+}
+
+footer{
+    border-top:1px solid #1e293b;
+    padding:40px 0;
+    text-align:center;
+    color:var(--muted);
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2.7rem;
+}
+
+.nav-links{
+    display:none;
+}
+
+.stats-grid{
+    grid-template-columns:1fr 1fr;
+}
+
+}
+
+</style>
 </head>
+
 <body>
-
-<nav>
-    <h2>Vectrs</h2>
-    <div>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="contact.html">Contact</a>
-        <a href="login.html">Login</a>
-    </div>
-</nav>
-
-<section class="hero">
-    <h1>Connect. Build. Grow.</h1>
-    <p>
-        Vectrs helps students, developers, founders and creators
-        collaborate on projects, participate in hackathons,
-        find opportunities and grow together.
-    </p>
-
-    <a href="signup.html" class="btn">Get Started</a>
-</section>
 
 <div class="container">
 
-    <div class="card">
-        <h3>Collaboration</h3>
-        <p>Find teammates and work on exciting projects.</p>
-    </div>
+<nav>
 
-    <div class="card">
-        <h3>Networking</h3>
-        <p>Connect with students, mentors and builders.</p>
-    </div>
+<div class="logo">Vectrs</div>
 
-    <div class="card">
-        <h3>Opportunities</h3>
-        <p>Discover hackathons, internships and competitions.</p>
-    </div>
+<div class="nav-links">
+<a href="#">Features</a>
+<a href="#">Pricing</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+</div>
+
+<a href="#" class="btn">Join Beta</a>
+
+</nav>
+
+<section class="hero">
+
+<div>
+
+<h1>
+Build Projects.<br>
+Find Teammates.<br>
+<span>Grow Together.</span>
+</h1>
+
+<p>
+Vectrs brings students, developers, creators,
+hackathon participants and founders into one
+collaborative ecosystem.
+</p>
+
+<div class="hero-buttons">
+<a href="#" class="btn">Get Started</a>
+<a href="#" class="btn-secondary">Learn More</a>
+</div>
 
 </div>
 
+</section>
+
+</div>
+
+<section class="features">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Everything You Need</h2>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Project Collaboration</h3>
+<p>Build teams and work together efficiently.</p>
+</div>
+
+<div class="card">
+<h3>Networking</h3>
+<p>Connect with builders from around the world.</p>
+</div>
+
+<div class="card">
+<h3>Hackathons</h3>
+<p>Discover events and recruit teammates.</p>
+</div>
+
+<div class="card">
+<h3>Mentorship</h3>
+<p>Learn from experienced professionals.</p>
+</div>
+
+<div class="card">
+<h3>Portfolio Building</h3>
+<p>Showcase projects and achievements.</p>
+</div>
+
+<div class="card">
+<h3>Opportunities</h3>
+<p>Find internships and startup roles.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="container">
+
+<div class="stats-grid">
+
+<div class="stat">
+<h2>10K+</h2>
+<p>Students</p>
+</div>
+
+<div class="stat">
+<h2>500+</h2>
+<p>Projects</p>
+</div>
+
+<div class="stat">
+<h2>100+</h2>
+<p>Hackathons</p>
+</div>
+
+<div class="stat">
+<h2>50+</h2>
+<p>Mentors</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="pricing">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Simple Pricing</h2>
+</div>
+
+<div class="grid">
+
+<div class="price-card">
+<h3>Free</h3>
+<div class="price">₹0</div>
+<p>Perfect for getting started.</p>
+</div>
+
+<div class="price-card">
+<h3>Pro</h3>
+<div class="price">Soon</div>
+<p>Advanced networking and visibility.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
 <footer>
-    <a href="privacy.html">Privacy Policy</a> |
-    <a href="terms.html">Terms</a>
-    <p>© 2026 Vectrs</p>
+© 2026 Vectrs. All rights reserved.
 </footer>
 
 </body>
